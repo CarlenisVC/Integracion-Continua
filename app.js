@@ -1,5 +1,9 @@
 function helloWorld() {
-    return "Hola Mundo";
+    return "Hola Mundo Modificado 1";
 }
 
-module.exports = helloWorld;
+function greetUser(name) {
+    return `Hola ${name}`;
+}
+
+module.exports = { helloWorld, greetUser };
