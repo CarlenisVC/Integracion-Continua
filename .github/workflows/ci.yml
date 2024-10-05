@@ -11,12 +11,13 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
+      - name: Checkout code
+        uses: actions/checkout@v3  # Actualizado a la versión 3
 
       - name: Setup Node.js
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v3  # Actualizado a la versión 3
         with:
-          node-version: '14'
+          node-version: '16'  # Cambiado a una versión no obsoleta, puedes usar '20' si prefieres
 
       - name: Install dependencies
         run: npm install
